@@ -1,0 +1,347 @@
+/* Department Page Specific Styles */
+
+/* Hero Section Overrides */
+.dept-hero {
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 80px;
+    color: var(--white);
+    text-align: center;
+}
+
+.dept-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-outline-hero {
+    border: 2px solid var(--white);
+    color: var(--white);
+    background: transparent;
+    padding: 10px 24px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.btn-outline-hero:hover {
+    background: var(--white);
+    color: var(--navy-dark);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.breadcrumb a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+    color: var(--green-academic);
+}
+
+.breadcrumb span {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* About Section */
+.dept-about {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-body);
+    margin-bottom: 20px;
+}
+
+/* Cards Grid (Courses, Labs, Careers) */
+.grid-section {
+    padding: 80px 0;
+    background: var(--bg-warm);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    color: var(--navy-dark);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--green-academic);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-top: 4px solid var(--green-academic);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+    color: var(--navy-dark);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-card li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    color: var(--text-muted);
+}
+
+.info-card li::before {
+    content: '•';
+    color: var(--green-academic);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Eligibility Section */
+.eligibility-section {
+    padding: 80px 0;
+    background: var(--navy-dark);
+    color: var(--white);
+}
+
+.eligibility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.eligibility-item i {
+    font-size: 2.5rem;
+    color: var(--green-academic);
+    margin-bottom: 20px;
+}
+
+/* LMS Feature Highlight */
+.dept-lms {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.lms-highlight {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.lms-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.lms-features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.lms-feat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--navy-mid);
+}
+
+.lms-feat i {
+    color: var(--green-academic);
+}
+
+/* Call to Action */
+.cta-section {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(rgba(58, 90, 64, 0.9), rgba(58, 90, 64, 0.9)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    color: var(--white);
+}
+
+.cta-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--green-academic);
+}
+
+.btn-light:hover {
+    background: #f1f1f1;
+    color: var(--green-dark);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .dept-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .lms-highlight {
+        flex-direction: column;
+    }
+
+    .lms-features-list {
+        grid-template-columns: 1fr;
+    }
+}
+/* Career Opportunities Redesign */
+.career-section {
+    padding: 80px 0;
+    background: #f8fafc; /* Distinct light background */
+}
+
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.career-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border-top: 5px solid var(--green-academic);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.career-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.career-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(58, 90, 64, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--green-academic);
+    font-size: 1.5rem;
+}
+
+.career-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    margin-bottom: 10px;
+}
+
+.career-desc {
+    color: var(--text-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.career-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+}
+
+.career-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #f1f5f9;
+    color: var(--navy-mid);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.career-tag i {
+    font-size: 0.7rem;
+    color: var(--green-mid);
+}
+

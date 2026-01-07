@@ -1,14 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-    --navy-dark: #0f172a;
-    --navy-mid: #1e293b;
-    --green-academic: #3a5a40;
-    --green-dark: #2d4432;
-    --bg-warm: #faf9f6;
-    --text-body: #334155;
-    --text-muted: #64748b;
+    /* New Color Scheme */
+    --primary-color: #116D3B;
+    /* Government Green */
+    --secondary-color: #F4F7F6;
+    --accent-color: #D4AF37;
+    --text-color: #333333;
     --white: #ffffff;
+
+    /* Legacy Mappings to maintain layout */
+    --navy-dark: var(--primary-color);
+    --navy-mid: var(--primary-color);
+    --green-academic: var(--accent-color);
+    --green-dark: #b8962e;
+    /* Darker Gold for hover */
+
+    /* Secondary Colors */
+    --bg-warm: var(--secondary-color);
+    --text-body: var(--text-color);
+    --text-muted: #64748b;
     --border: #e2e8f0;
 
     --spacing-inner: 100px;
@@ -30,7 +41,7 @@ html {
 
 body {
 
-    color: var(--navy-dark);
+    color: var(--text-color);
     background-color: var(--bg-warm);
     line-height: 1.6;
 }
@@ -237,7 +248,8 @@ nav a:hover {
 
 .badge {
     background: var(--bg-warm);
-    color: var(--green-academic);
+    color: var(--primary-color);
+
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -259,7 +271,7 @@ nav a:hover {
 
 .mv-item i {
     font-size: 1.5rem;
-    color: var(--green-academic);
+    color: var(--primary-color);
     margin-top: 5px;
 }
 
@@ -296,13 +308,13 @@ nav a:hover {
 
 .program-card i {
     font-size: 2rem;
-    color: var(--green-academic);
+    color: var(--primary-color);
     margin-bottom: 24px;
 }
 
 .program-card a {
     text-decoration: none;
-    color: var(--green-academic);
+    color: var(--primary-color);
     font-weight: 700;
     display: inline-block;
     margin-top: 20px;
@@ -354,10 +366,35 @@ nav a:hover {
 }
 
 .depts-scroll {
+    overflow-x: auto;
+    /* Enable native horizontal scrolling */
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    cursor: grab;
+    /* Indicate draggable */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+    user-select: none;
+    /* Prevent text selection while dragging */
+}
+
+.depts-scroll::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari */
+}
+
+.depts-scroll:active {
+    cursor: grabbing;
+}
+
+.scroll-track {
     display: flex;
     gap: 15px;
-    overflow-x: auto;
-    padding: 20px 0;
+    width: max-content;
+    /* Animation removed, handled by JS */
 }
 
 .dept-mini {
@@ -369,7 +406,36 @@ nav a:hover {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
+    /* Added */
+    color: var(--navy-dark);
+    /* Added */
+    transition: var(--transition);
+    /* Added */
 }
+
+/* Added hover effect for mini depts */
+.dept-mini:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.dept-mini:hover i {
+    color: var(--white);
+    /* Ensure icon turns white */
+}
+
+/* Ensure dept-card as link looks correct */
+a.dept-card {
+    display: block;
+    text-decoration: none;
+    color: var(--text-body);
+}
+
+a.dept-card h4 {
+    color: var(--navy-dark);
+}
+
 
 /* Notices Section */
 .notice-section {
@@ -410,12 +476,13 @@ nav a:hover {
 }
 
 .notice-info a:hover {
-    color: var(--green-academic);
+    color: var(--primary-color);
 }
 
 .text-link {
-    color: var(--green-academic);
+    color: var(--primary-color);
     font-weight: 700;
+
     text-decoration: none;
 }
 
@@ -446,7 +513,7 @@ nav a:hover {
 
 .why-box i {
     font-size: 2rem;
-    color: var(--green-academic);
+    color: var(--primary-color);
     margin-bottom: 20px;
     display: block;
 }
@@ -557,11 +624,11 @@ footer {
 
 .lms-icon i {
     font-size: 1.5rem;
-    color: var(--green-academic);
+    color: var(--primary-color);
 }
 
 .lms-card:hover .lms-icon {
-    background: var(--green-academic);
+    background: var(--primary-color);
 }
 
 .lms-card:hover .lms-icon i {
