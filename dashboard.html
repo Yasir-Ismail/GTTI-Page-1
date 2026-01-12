@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | GTTI SmartHub</title>
+    <!-- Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body class="dashboard-body">
+
+    <!-- Navigation Bar -->
+    <header class="sticky-nav">
+        <div class="container nav-wrap">
+            <a href="index.html" class="logo-wrap">
+                <img src="assets/gtti new logo.png" alt="GTTI Logo">
+                <span class="logo-text">GTTI SmartHub</span>
+            </a>
+            <div class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></div>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="lms.html">Course Content</a></li>
+                    <li><a href="#">Results</a></li>
+                    <li><a href="#" style="display: flex; align-items: center; gap: 8px;"><i
+                                class="fas fa-user-circle"></i> Yasir Ismail</a></li>
+                    <li><a href="login.html" style="color: #ff9999;"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="container">
+
+            <!-- 1) Hero / Welcome Panel -->
+            <section class="hero-banner">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+                    alt="Yasir Ismail" class="student-avatar">
+                <div class="welcome-content">
+                    <h1>Welcome back, Yasir!</h1>
+                    <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 16px;">
+                        <span class="student-badge">ID: 2024-EL-042</span>
+                        <span class="student-badge">Electrical Technology</span>
+                    </div>
+                    <div class="status-bar" style="display: flex; gap: 24px; font-size: 0.9rem; opacity: 0.9;">
+                        <span><i class="far fa-calendar-alt"></i> Batch: 2024-2025</span>
+                        <span><i class="far fa-check-circle"></i> Status: Active Enrolled</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard Content Grid -->
+            <div class="dashboard-layout">
+
+                <!-- Left Main Column -->
+                <div class="dash-main-content">
+
+                    <!-- 2) Single Course Card (Main Panel) -->
+                    <section class="dash-card main-course-card">
+                        <div class="course-info-primary">
+                            <span class="badge" style="margin-bottom: 12px;">Currently Enrolled</span>
+                            <h2>Industrial Wiring & Safety</h2>
+                            <span class="dept-name">Department of Electrical Technology</span>
+
+                            <div class="instructor-brief">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                                    alt="Instructor" class="inst-img">
+                                <div class="inst-details">
+                                    <h5>Engr. M. Ahmed</h5>
+                                    <p>Senior Instructor • <a href="mailto:ahmed@gtti.edu"
+                                            style="color: var(--dashboard-primary);"><i class="far fa-envelope"></i>
+                                            Contact</a></p>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 32px; display: flex; gap: 16px;">
+                                <button class="btn btn-primary" style="padding: 12px 24px;"
+                                    onclick="openModal('courseDetailsModal')">View Course Details</button>
+                                <a href="#" class="btn btn-outline-dark" style="padding: 12px 24px;"><i
+                                        class="far fa-file-pdf"></i> Outline</a>
+                            </div>
+                        </div>
+
+                        <div class="course-metrics">
+                            <!-- 3) Attendance & Progress Visuals -->
+                            <div class="metric-group">
+                                <h6><span>Overall Attendance</span> <span>85%</span></h6>
+                                <div class="progress-bar-container">
+                                    <div class="progress-fill" style="width: 85%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="metric-group">
+                                <h6><span>Module Completion</span> <span>75%</span></h6>
+                                <div class="progress-bar-container">
+                                    <div class="progress-fill"
+                                        style="width: 75%; background: var(--dashboard-secondary);"></div>
+                                </div>
+                                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px;">6 of 8 Modules
+                                    Completed</p>
+                            </div>
+
+                            <div class="metric-group">
+                                <h6>Timeline</h6>
+                                <div
+                                    style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">
+                                    <span>Sep 2024</span>
+                                    <span>Jun 2025</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-fill" style="width: 40%; background: var(--dashboard-accent);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 4) Assignments / Tasks -->
+                    <section class="dash-card" style="margin-top: 32px;">
+                        <div class="dash-section-header">
+                            <h3><i class="fas fa-tasks" style="color: var(--warning);"></i> Upcoming Tasks</h3>
+                            <button class="text-link"
+                                style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:inherit;"
+                                onclick="openModal('allTasksModal')">View All Tasks</button>
+                        </div>
+                        <div class="task-list">
+                            <div class="task-card">
+                                <span class="task-status pending"></span>
+                                <div class="task-body">
+                                    <h5>Practical: Three Phase Motor Wiring</h5>
+                                    <p>Due: Jan 15, 2026 • 2 days left</p>
+                                </div>
+                                <button class="btn-course" style="border:none;background:none;cursor:pointer;"
+                                    onclick="openTaskModal('Three Phase Motor Wiring')">Open →</button>
+                            </div>
+                            <div class="task-card">
+                                <span class="task-status submitted"></span>
+                                <div class="task-body">
+                                    <h5>Theory: Industrial Safety Standards</h5>
+                                    <p>Submitted: Jan 05 • <span style="color: var(--success);">Graded: A</span></p>
+                                </div>
+                                <button class="btn-course" style="border:none;background:none;cursor:pointer;"
+                                    onclick="openTaskModal('Industrial Safety Standards')">View →</button>
+                            </div>
+                            <div class="task-card">
+                                <span class="task-status pending"></span>
+                                <div class="task-body">
+                                    <h5>Workshop Quiz: Circuit Breakers</h5>
+                                    <p>Due: Jan 20, 2026 • 7 days left</p>
+                                </div>
+                                <button class="btn-course" style="border:none;background:none;cursor:pointer;"
+                                    onclick="openTaskModal('Circuit Breakers')">Go →</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Sidebar Column -->
+                <aside class="dash-sidebar-content">
+
+                    <!-- 6) Calendar & Lab Schedule Preview -->
+                    <section class="dash-card">
+                        <div class="dash-section-header">
+                            <h3><i class="far fa-calendar-alt" style="color: var(--dashboard-secondary);"></i> Today's
+                                Schedule</h3>
+                        </div>
+                        <div class="schedule-preview">
+                            <div class="class-item" style="background: rgba(17, 109, 59, 0.05);">
+                                <div style="flex: 1;">
+                                    <h5 style="font-size: 0.9rem; margin-bottom: 4px;">Theory: Safety Protocols</h5>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted);"><i class="far fa-clock"></i>
+                                        09:00 - 10:30 • Room 12</p>
+                                </div>
+                                <span class="type-indicator type-theory">Theory</span>
+                            </div>
+                            <div class="class-item" style="background: rgba(0, 128, 128, 0.05);">
+                                <div style="flex: 1;">
+                                    <h5 style="font-size: 0.9rem; margin-bottom: 4px;">Main Lab: Motor Control</h5>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted);"><i class="far fa-clock"></i>
+                                        11:00 - 01:00 • Lab 04</p>
+                                </div>
+                                <span class="type-indicator type-labs">Labs</span>
+                            </div>
+                            <div class="class-item" style="background: rgba(5, 150, 105, 0.05);">
+                                <div style="flex: 1;">
+                                    <h5 style="font-size: 0.9rem; margin-bottom: 4px;">Workshop: Wiring Setup</h5>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted);"><i class="far fa-clock"></i>
+                                        02:00 - 03:30 • Workshop B</p>
+                                </div>
+                                <span class="type-indicator type-practical">Practical</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 7) Quick Links / CTAs -->
+                    <section class="dash-card" style="margin-top: 32px;">
+                        <div class="dash-section-header">
+                            <h3>Quick Access</h3>
+                        </div>
+                        <div class="quick-links-grid">
+                            <a href="lms.html" class="btn-quick">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>LMS Portal</span>
+                            </a>
+                            <a href="javascript:void(0)" class="btn-quick" onclick="openCertificateModal()">
+                                <i class="fas fa-medal"></i>
+                                <span>Certificates</span>
+                            </a>
+                            <a href="#" class="btn-quick">
+                                <i class="fas fa-user-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                            <a href="#" class="btn-quick">
+                                <i class="fas fa-headset"></i>
+                                <span>Support</span>
+                            </a>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal: View Course Details -->
+    <div class="modal-overlay" id="courseDetailsModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div>
+                    <h3>Industrial Wiring & Safety</h3>
+                    <span class="badge"
+                        style="background:rgba(17, 109, 59, 0.1); color:var(--dashboard-primary);">Active
+                        Status</span>
+                </div>
+                <button class="modal-close" onclick="closeModal('courseDetailsModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="info-stack">
+                    <div class="info-item">
+                        <h4><i class="fas fa-info-circle"></i> Course Overview</h4>
+                        <p>Advanced vocational training focusing on industrial electrical systems, electrical safety
+                            standards, and commercial wiring protocols. Training is 80% practical/lab-based.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="fas fa-user-tie"></i> Instructor Information</h4>
+                        <p><strong>Engr. M. Ahmed</strong><br>Senior Electrical Instructor<br>Office Hours: Monday -
+                            Wednesday, 02:00 PM - 04:00 PM</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="far fa-calendar-check"></i> Course Timeline</h4>
+                        <p><strong>Duration:</strong> Sep 2024 - Jun 2025<br><strong>Schedule:</strong> Mon to Thu
+                            (09:00 AM - 03:30 PM)</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="fas fa-graduation-cap"></i> Skills You Will Learn</h4>
+                        <ul class="skills-list">
+                            <li><i class="fas fa-check"></i> Three Phase Motor Control</li>
+                            <li><i class="fas fa-check"></i> Industrial Safety Compliance</li>
+                            <li><i class="fas fa-check"></i> Panel Wiring & Maintenance</li>
+                            <li><i class="fas fa-check"></i> Fault Diagnostic Techniques</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="fas fa-chart-line"></i> Attendance Snapshot</h4>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                            <span>Current Attendance</span>
+                            <strong>85%</strong>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-dark" style="padding: 10px 24px;"
+                    onclick="closeModal('courseDetailsModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: View All Tasks -->
+    <div class="modal-overlay" id="allTasksModal">
+        <div class="modal-container wide">
+            <div class="modal-header">
+                <div>
+                    <h3>Course Tasks</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Tasks for your currently enrolled course</p>
+                </div>
+                <button class="modal-close" onclick="closeModal('allTasksModal')">&times;</button>
+            </div>
+            <div class="modal-body" style="background: #f8fafc;">
+                <div class="task-list-modal">
+                    <!-- Task 1 -->
+                    <div class="task-card-modal">
+                        <div>
+                            <h5 style="font-size: 1rem; margin-bottom: 4px;">Practical: Three Phase Motor Wiring</h5>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Due: Jan 15, 2026</p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <span class="badge-outline">Pending</span>
+                            <button class="text-link" style="background:none; border:none; cursor:pointer;"
+                                onclick="closeModal('allTasksModal'); openTaskModal('Three Phase Motor Wiring')">Open</button>
+                        </div>
+                    </div>
+                    <!-- Task 2 -->
+                    <div class="task-card-modal">
+                        <div>
+                            <h5 style="font-size: 1rem; margin-bottom: 4px;">Theory: Industrial Safety Standards</h5>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Submitted: Jan 05, 2026</p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <span class="badge-muted">Completed</span>
+                            <button class="text-link" style="background:none; border:none; cursor:pointer;"
+                                onclick="closeModal('allTasksModal'); openTaskModal('Industrial Safety Standards')">Open</button>
+                        </div>
+                    </div>
+                    <!-- Task 3 -->
+                    <div class="task-card-modal">
+                        <div>
+                            <h5 style="font-size: 1rem; margin-bottom: 4px;">Workshop Quiz: Circuit Breakers</h5>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Due: Jan 20, 2026</p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <span class="badge-outline">Pending</span>
+                            <button class="text-link" style="background:none; border:none; cursor:pointer;"
+                                onclick="closeModal('allTasksModal'); openTaskModal('Circuit Breakers')">Open</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-dark" style="padding: 10px 24px;"
+                    onclick="closeModal('allTasksModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Course Certificate Status -->
+    <div class="modal-overlay" id="certificateModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div>
+                    <h3>Course Certificate</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Official GTTI Course Completion Certificate
+                    </p>
+                </div>
+                <button class="modal-close" onclick="closeModal('certificateModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Info Card -->
+                <div class="cert-info-card">
+                    <div class="cert-field">
+                        <h5>Student Name</h5>
+                        <p>Yasir Ismail</p>
+                    </div>
+                    <div class="cert-field">
+                        <h5>Roll Number</h5>
+                        <p>2024-EL-042</p>
+                    </div>
+                    <div class="cert-field">
+                        <h5>Course</h5>
+                        <p>Industrial Wiring & Safety</p>
+                    </div>
+                    <div class="cert-field">
+                        <h5>Department</h5>
+                        <p>Electrical Technology</p>
+                    </div>
+                    <div class="cert-field">
+                        <h5>Instructor</h5>
+                        <p>Engr. M. Ahmed</p>
+                    </div>
+                    <div class="cert-field">
+                        <h5>Duration</h5>
+                        <p>9 Months (Active)</p>
+                    </div>
+                </div>
+
+                <!-- Status Hub -->
+                <div class="cert-status-hub">
+                    <div id="certStatusBadge" class="status-badge-lg status-in-progress">In Progress</div>
+                    <p id="certStatusMsg" style="font-size: 0.95rem; color: var(--text-main);">Certificate will be
+                        issued after successful course completion.</p>
+                </div>
+
+                <!-- Progress Snapshot -->
+                <div class="progress-snapshot">
+                    <div class="snapshot-item">
+                        <i class="fas fa-tasks"></i>
+                        <span class="value">75%</span>
+                        <span class="label">Modules</span>
+                    </div>
+                    <div class="snapshot-item">
+                        <i class="fas fa-user-check"></i>
+                        <span class="value">85%</span>
+                        <span class="label">Attendance</span>
+                    </div>
+                    <div class="snapshot-item">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span class="value">Pending</span>
+                        <span class="label">Final Exam</span>
+                    </div>
+                </div>
+
+                <!-- Verification Note -->
+                <div class="verification-note">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>This certificate is issued by GTTI and can be verified through the institute.</span>
+                </div>
+            </div>
+            <div class="modal-footer" style="justify-content: space-between; align-items: center;">
+                <div style="display: flex; gap: 8px;">
+                    <button id="btnDownloadCert" class="btn btn-primary" style="padding: 10px 20px;" disabled
+                        title="Certificate not yet issued">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                    <button class="btn btn-outline-dark" style="padding: 10px 20px;"
+                        onclick="closeModal('certificateModal'); openModal('courseDetailsModal')">
+                        <i class="fas fa-eye"></i> View Progress
+                    </button>
+                </div>
+                <button class="btn btn-outline-dark" style="padding: 10px 20px;"
+                    onclick="closeModal('certificateModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Task Details (Refactored from Side Panel to Centered Modal) -->
+    <div class="modal-overlay" id="taskDetailsModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div>
+                    <h3 id="taskModalTitle">Task Details</h3>
+                    <span class="badge-outline" id="taskModalStatus">Pending</span>
+                </div>
+                <button class="modal-close" onclick="closeModal('taskDetailsModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="info-stack">
+                    <div class="info-item">
+                        <h4><i class="fas fa-align-left"></i> Description</h4>
+                        <p id="taskModalDesc">Detailed instructions for the selected vocational task. This includes
+                            safety
+                            protocols and required equipment list.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="fas fa-list-ol"></i> Instructions</h4>
+                        <ol style="padding-left: 20px; font-size: 0.95rem; line-height: 1.8;">
+                            <li>Perform initial safety check of the equipment.</li>
+                            <li>Follow the circuit diagram provided in the lab manual.</li>
+                            <li>Record all measurements and fault observations.</li>
+                            <li>Submit the practical report to the instructor for verification.</li>
+                        </ol>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="far fa-clock"></i> Important Dates</h4>
+                        <div style="font-size: 0.95rem;">
+                            <strong>Due Date:</strong> Jan 15, 2026<br>
+                            <strong>Last Modified:</strong> Jan 07, 2026
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><i class="fas fa-info-circle"></i> Submission Info</h4>
+                        <p><strong>Type:</strong> Practical / Lab Submission<br><strong>Status:</strong> Not
+                            Submitted<br><strong>Remarks:</strong> No remarks yet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="justify-content: space-between;">
+                <button class="btn btn-outline-dark" onclick="closeModal('taskDetailsModal')">Back to Tasks</button>
+                <button class="btn btn-outline-dark" onclick="closeModal('taskDetailsModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2026 Government Technical Training Institute RYK. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Modal Logic
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'flex';
+            setTimeout(() => modal.classList.add('active'), 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Certificate Modal Logic (Demonstration State)
+        function openCertificateModal() {
+            // We can toggle states here for testing/demo
+            // Current state: In Progress
+            openModal('certificateModal');
+        }
+
+        // Task Modal Persistence Logic
+        function openTaskModal(title) {
+            document.getElementById('taskModalTitle').innerText = title;
+            openModal('taskDetailsModal');
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 250);
+        }
+
+        // Keyboard Accessibility (ESC closes modals)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const activeModal = document.querySelector('.modal-overlay.active');
+                if (activeModal) {
+                    closeModal(activeModal.id);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

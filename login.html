@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login | GTTI SmartHub</title>
+    <!-- Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-wrapper">
+        <!-- Left Panel: Hero Section -->
+        <div class="login-hero">
+            <div class="hero-content">
+                <h1>Welcome to GTTI SmartHub</h1>
+                <p>The premier gateway for your academic journey. Access your courses, attendance records, exam results,
+                    and institutional notices in one secure place.</p>
+            </div>
+            <div class="hero-footer">
+                <p>&copy; 2024 Government Technical Training Institute RYK. Excellence in Technical Education.</p>
+            </div>
+        </div>
+
+        <!-- Right Panel: Login Form -->
+        <div class="login-panel">
+            <div class="login-card">
+                <div class="login-header">
+                    <a href="index.html">
+                        <img src="assets/gtti new logo.png" alt="GTTI Logo">
+                    </a>
+                    <h2>Student Login</h2>
+                    <p>Please enter your credentials to access your dashboard.</p>
+                </div>
+
+                <form action="dashboard.html" method="POST"
+                    onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Student ID or Email</label>
+                        <div style="position: relative;">
+                            <input type="text" id="email" class="form-input" placeholder="e.g. 2024-MECH-001" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <div style="position: relative;">
+                            <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-wrap">
+                            <input type="checkbox">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login">Sign In <i class="fas fa-arrow-right"
+                            style="margin-left: 8px;"></i></button>
+                </form>
+
+                <div class="panel-footer">
+                    <a href="#">Contact Support</a>
+                    <span>|</span>
+                    <a href="#">Help Center</a>
+                    <span>|</span>
+                    <a href="index.html">Back to Home Website</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
