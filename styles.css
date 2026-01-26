@@ -149,10 +149,64 @@ nav a:hover {
     border-bottom: 2px solid var(--green-academic);
 }
 
+.nav-btn-yellow {
+    background-color: var(--accent-color);
+    color: var(--navy-dark) !important;
+    padding: 10px 24px;
+    border-radius: var(--radius);
+    margin-left: 10px;
+    border-bottom: none !important;
+}
+
+.nav-btn-yellow:hover {
+    background-color: var(--green-dark);
+    /* Darker Gold */
+    color: var(--white) !important;
+    transform: translateY(-2px);
+    border-bottom: none !important;
+}
+
 .mobile-toggle {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--navy-dark);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+    top: 100%;
+    right: 0;
+    padding: 10px 0;
+}
+
+.dropdown-content a {
+    color: var(--white);
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
+    border-bottom: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Buttons */
@@ -649,9 +703,26 @@ footer {
     font-family: 'Inter', sans-serif;
 }
 
+/* Visibility Utilities */
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
 @media (max-width: 992px) {
+    .mobile-only {
+        display: block;
+    }
+
+    .desktop-only {
+        display: none !important;
+    }
+
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
     }
 
     .hero-grid,
@@ -659,18 +730,21 @@ footer {
     .why-grid,
     .footer-main {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .programs-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .featured-depts {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    /* Mobile Navigation */
     .mobile-toggle {
         display: block;
+        color: var(--white);
     }
 
     nav {
@@ -680,7 +754,9 @@ footer {
         top: 100%;
         left: 0;
         background: var(--navy-dark);
-        padding: 20px;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
     nav.active {
@@ -689,7 +765,53 @@ footer {
 
     nav ul {
         flex-direction: column;
-        gap: 15px;
+        gap: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Mobile Dropdown */
+    .dropdown:hover .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 0;
+        display: block;
+    }
+
+    .dropdown-content a {
+        padding: 12px 0;
+        padding-left: 0;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .nav-btn-yellow {
+        margin: 15px 20px 5px;
+        /* Add spacing */
+        display: inline-block;
+        width: auto;
+    }
+
+    .dropdown .nav-btn-yellow {
+        margin: 0;
+        background: transparent;
+        color: var(--accent-color) !important;
+        padding: 15px 0;
+    }
+
+    .dropdown-content {
+        min-width: 100%;
+        text-align: center;
     }
 
     .hero-image-wrap {
@@ -700,13 +822,72 @@ footer {
         height: 300px;
     }
 
+    /* Adjust Hero Text Padding */
+    .hero-text {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+
     .lms-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-depts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid {
+        gap: 30px;
     }
 }
 
 @media (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
     .lms-grid {
         grid-template-columns: 1fr;
+    }
+
+    .featured-depts {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero-text h1 br {
+        display: none;
+        /* Let text wrap naturally */
+    }
+
+    .footer-main {
+        text-align: center;
+        gap: 40px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .mv-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .department-scroll {
+        padding-bottom: 20px;
     }
 }
