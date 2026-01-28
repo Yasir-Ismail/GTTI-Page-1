@@ -9,7 +9,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=4">
 </head>
 
 <body>
@@ -35,13 +35,13 @@
                             <div class="dropdown-content">
                                 <a href="login.html">Student Portal</a>
                                 <a href="teacher-login.html">Teacher Portal</a>
-                                <a href="admin-dashboard.html">Admin Portal</a>
+                                <a href="admin-login.html">Admin Portal</a>
                             </div>
                         </div>
                     </li>
                     <li class="mobile-only"><a href="login.html">Student Portal</a></li>
                     <li class="mobile-only"><a href="teacher-login.html">Teacher Portal</a></li>
-                    <li class="mobile-only"><a href="admin-dashboard.html">Admin Portal</a></li>
+                    <li class="mobile-only"><a href="admin-login.html">Admin Portal</a></li>
                 </ul>
             </nav>
         </div>
@@ -49,7 +49,7 @@
 
     <main>
         <section id="home" class="hero">
-            <div class="container hero-grid">
+            <div class="container hero-grid reveal">
                 <div class="hero-text">
                     <h1>Excellence in Technical <br> and Vocational Training.</h1>
                     <p>Establishing global benchmarks in technical education. Empowering the workforce through
@@ -60,8 +60,7 @@
                     </div>
                 </div>
                 <div class="hero-image-wrap">
-                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                        alt="GTTI Campus">
+                    <img src="assets/hero .jpeg" alt="GTTI Campus">
                 </div>
             </div>
         </section>
@@ -69,7 +68,7 @@
         <!-- About GTTI Section -->
         <section id="about" class="about-section">
             <div class="container">
-                <div class="about-grid">
+                <div class="about-grid reveal">
                     <div class="about-text">
                         <span class="badge">Institutional Profile</span>
                         <h2>About GTTI RYK</h2>
@@ -112,7 +111,7 @@
                     <h2>Core Programs</h2>
                     <p>Highly specialized training programs designed for immediate industrial impact.</p>
                 </div>
-                <div class="programs-grid">
+                <div class="programs-grid reveal">
                     <div class="program-card">
                         <i class="fas fa-bolt"></i>
                         <h3>Electrical Engineering</h3>
@@ -152,18 +151,10 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Academic Departments</h2>
-                    <p>GTTI SmartHub hosts 18 specialized departments managed by industry veterans.</p>
+                    <p>GTTI SmartHub hosts 8 specialized departments managed by industry veterans.</p>
                 </div>
 
-                <div class="featured-depts">
-                    <a href="departments/electrical.html" class="dept-card">
-                        <i class="fas fa-bolt"></i>
-                        <h4>Electrical Technology</h4>
-                    </a>
-                    <a href="departments/mechanical.html" class="dept-card">
-                        <i class="fas fa-cog"></i>
-                        <h4>Mechanical Technology</h4>
-                    </a>
+                <div class="featured-depts reveal">
                     <a href="departments/it.html" class="dept-card">
                         <i class="fas fa-laptop-code"></i>
                         <h4>Information Technology</h4>
@@ -172,70 +163,30 @@
                         <i class="fas fa-building"></i>
                         <h4>Civil Technology</h4>
                     </a>
-                    <a href="departments/auto-diesel.html" class="dept-card">
-                        <i class="fas fa-car"></i>
-                        <h4>Auto & Diesel</h4>
+                    <a href="departments/mechanical.html" class="dept-card">
+                        <i class="fas fa-cog"></i>
+                        <h4>Mechanical Technology</h4>
+                    </a>
+                    <a href="departments/electrical.html" class="dept-card">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Electrical Technology</h4>
                     </a>
                     <a href="departments/electronics.html" class="dept-card">
                         <i class="fas fa-microchip"></i>
                         <h4>Electronics</h4>
                     </a>
-                </div>
-
-                <div class="other-depts-wrap">
-                    <h5>Specialized Technical Wings</h5>
-                    <div class="depts-scroll">
-                        <div class="scroll-track">
-                            <!-- Original Set -->
-                            <a href="departments/refrigeration.html" class="dept-mini"><i class="fas fa-snowflake"></i>
-                                Refrigeration & AC</a>
-                            <a href="departments/welding.html" class="dept-mini"><i class="fas fa-fire"></i> Welding</a>
-                            <a href="departments/plumbing.html" class="dept-mini"><i class="fas fa-faucet"></i>
-                                Plumbing</a>
-                            <a href="departments/cnc.html" class="dept-mini"><i class="fas fa-tools"></i> CNC /
-                                Machining</a>
-                            <a href="departments/computer-apps.html" class="dept-mini"><i
-                                    class="fas fa-window-restore"></i> Computer Applications</a>
-                            <a href="departments/networking.html" class="dept-mini"><i class="fas fa-network-wired"></i>
-                                Networking</a>
-                            <a href="departments/office-management.html" class="dept-mini"><i
-                                    class="fas fa-user-tie"></i> Office Management</a>
-                            <a href="departments/drafting.html" class="dept-mini"><i class="fas fa-pencil-ruler"></i>
-                                Drafting</a>
-                            <a href="departments/industrial-electronics.html" class="dept-mini"><i
-                                    class="fas fa-broadcast-tower"></i> Industrial Electronics</a>
-                            <a href="departments/mechatronics.html" class="dept-mini"><i class="fas fa-robot"></i>
-                                Mechatronics</a>
-                            <a href="departments/instrumentation.html" class="dept-mini"><i
-                                    class="fas fa-tachometer-alt"></i> Instrumentation</a>
-                            <a href="departments/safety.html" class="dept-mini"><i class="fas fa-shield-alt"></i> Safety
-                                & Quality Control</a>
-                            <!-- Duplicate Set for Seamless Scroll -->
-                            <a href="departments/refrigeration.html" class="dept-mini"><i class="fas fa-snowflake"></i>
-                                Refrigeration & AC</a>
-                            <a href="departments/welding.html" class="dept-mini"><i class="fas fa-fire"></i> Welding</a>
-                            <a href="departments/plumbing.html" class="dept-mini"><i class="fas fa-faucet"></i>
-                                Plumbing</a>
-                            <a href="departments/cnc.html" class="dept-mini"><i class="fas fa-tools"></i> CNC /
-                                Machining</a>
-                            <a href="departments/computer-apps.html" class="dept-mini"><i
-                                    class="fas fa-window-restore"></i> Computer Applications</a>
-                            <a href="departments/networking.html" class="dept-mini"><i class="fas fa-network-wired"></i>
-                                Networking</a>
-                            <a href="departments/office-management.html" class="dept-mini"><i
-                                    class="fas fa-user-tie"></i> Office Management</a>
-                            <a href="departments/drafting.html" class="dept-mini"><i class="fas fa-pencil-ruler"></i>
-                                Drafting</a>
-                            <a href="departments/industrial-electronics.html" class="dept-mini"><i
-                                    class="fas fa-broadcast-tower"></i> Industrial Electronics</a>
-                            <a href="departments/mechatronics.html" class="dept-mini"><i class="fas fa-robot"></i>
-                                Mechatronics</a>
-                            <a href="departments/instrumentation.html" class="dept-mini"><i
-                                    class="fas fa-tachometer-alt"></i> Instrumentation</a>
-                            <a href="departments/safety.html" class="dept-mini"><i class="fas fa-shield-alt"></i> Safety
-                                & Quality Control</a>
-                        </div>
-                    </div>
+                    <a href="departments/drafting.html" class="dept-card">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <h4>Draftman / Drafting</h4>
+                    </a>
+                    <a href="departments/welding.html" class="dept-card">
+                        <i class="fas fa-fire"></i>
+                        <h4>Welding</h4>
+                    </a>
+                    <a href="departments/cooking.html" class="dept-card">
+                        <i class="fas fa-utensils"></i>
+                        <h4>Cooking & Culinary</h4>
+                    </a>
                 </div>
             </div>
         </section>
@@ -247,7 +198,7 @@
                     <h2>LMS Features</h2>
                     <p>Experience a modern Learning Management System designed for seamless academic operations.</p>
                 </div>
-                <div class="lms-grid">
+                <div class="lms-grid reveal">
                     <div class="lms-card">
                         <div class="lms-icon"><i class="fas fa-user-graduate"></i></div>
                         <h3>Student Dashboard</h3>
@@ -299,7 +250,7 @@
                     <h2>Official Announcements</h2>
                     <p>Latest institutional updates and circulars from the GTTI administration.</p>
                 </div>
-                <div class="notice-list-full">
+                <div class="notice-list-full reveal">
                     <div class="notice-item">
                         <div class="date-tag">21 DEC</div>
                         <div class="notice-info">
@@ -335,7 +286,7 @@
                     <h2>Why Choose GTTI?</h2>
                     <p>Our commitment to excellence makes us a leader in technical and vocational training.</p>
                 </div>
-                <div class="why-grid">
+                <div class="why-grid reveal">
                     <div class="why-box">
                         <i class="fas fa-certificate"></i>
                         <h4>ISO Certified</h4>
@@ -367,7 +318,7 @@
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
-            <div class="footer-main">
+            <div class="footer-main reveal">
                 <div class="footer-brand">
                     <h3 class="logo-text">GTTI SmartHub</h3>
                     <p>The apex body for technical training and vocational excellence. Empowering national industrial
@@ -472,6 +423,23 @@
             const x = e.pageX - scrollContainer.offsetLeft;
             const walk = (x - startX) * 2; // Drag speed multiplier
             scrollContainer.scrollLeft = scrollLeft - walk;
+        });
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
         });
     </script>
 </body>
