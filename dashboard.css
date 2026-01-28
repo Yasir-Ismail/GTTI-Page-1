@@ -50,7 +50,9 @@ body.dashboard-body {
 }
 
 .dash-card:hover {
+    transform: translateY(-4px);
     box-shadow: var(--shadow-md);
+    border-color: var(--dashboard-accent);
 }
 
 /* Section Title */
