@@ -261,10 +261,12 @@
         grid-template-columns: 1fr;
     }
 }
+
 /* Career Opportunities Redesign */
 .career-section {
     padding: 80px 0;
-    background: #f8fafc; /* Distinct light background */
+    background: #f8fafc;
+    /* Distinct light background */
 }
 
 .career-grid {
@@ -344,4 +346,3 @@
     font-size: 0.7rem;
     color: var(--green-mid);
 }
-
