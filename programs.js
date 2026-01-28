@@ -236,7 +236,7 @@ function renderCoursesSafe(data) {
                 <p class="card-desc">${course.description}</p>
                 <div class="card-actions">
                     <button class="btn-details" onclick="openModal('${course.title.replace(/'/g, "\\'") }')">View Details</button>
-                    <button class="btn-apply">Apply Now</button>
+                    <a href="student-registration.html" class="btn-apply" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Apply Now</a>
                 </div>
             </div>
         `;
@@ -304,7 +304,7 @@ window.openModal = function(courseTitle) {
             </div>
         </div>
         <div class="modal-footer">
-            <button class="btn-apply-modal">Apply for Admission</button>
+            <a href="student-registration.html" class="btn-apply-modal" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Apply for Admission</a>
         </div>
     `;
     
