@@ -308,10 +308,11 @@
                                         <span style="font-size: 0.85rem; font-weight: 600;"><i
                                                 class="fas fa-user-friends"></i> 42 Students</span>
                                         <div style="display: flex; gap: 8px;">
+                                            <button class="btn-lms-outline" style="padding: 6px 12px;"
+                                                onclick="openModal('attendanceModal')">Attendance</button>
                                             <button class="btn-lms-outline"
-                                                style="padding: 6px 12px;">Attendance</button>
-                                            <button class="btn-lms-outline"
-                                                style="padding: 6px 12px; background: var(--db-primary); color: white; border: none;">View</button>
+                                                style="padding: 6px 12px; background: var(--db-primary); color: white; border: none;"
+                                                onclick="switchView('courses')">View</button>
                                         </div>
                                     </div>
                                 </div>
@@ -325,10 +326,11 @@
                                         <span style="font-size: 0.85rem; font-weight: 600;"><i
                                                 class="fas fa-user-friends"></i> 38 Students</span>
                                         <div style="display: flex; gap: 8px;">
+                                            <button class="btn-lms-outline" style="padding: 6px 12px;"
+                                                onclick="openModal('attendanceModal')">Attendance</button>
                                             <button class="btn-lms-outline"
-                                                style="padding: 6px 12px;">Attendance</button>
-                                            <button class="btn-lms-outline"
-                                                style="padding: 6px 12px; background: var(--db-primary); color: white; border: none;">View</button>
+                                                style="padding: 6px 12px; background: var(--db-primary); color: white; border: none;"
+                                                onclick="switchView('courses')">View</button>
                                         </div>
                                     </div>
                                 </div>
@@ -357,7 +359,8 @@
                                                 <span class="badge"
                                                     style="background: #FEF3C7; color: #D97706; font-size: 0.75rem;">12
                                                     Submissions Pending</span>
-                                                <button class="btn-primary" style="padding: 8px 20px;">Review</button>
+                                                <button class="btn-primary" style="padding: 8px 20px;"
+                                                    onclick="switchView('assignments')">Review</button>
                                             </div>
                                         </div>
                                     </div>
@@ -376,7 +379,8 @@
                                                 <span class="badge"
                                                     style="background: #D1FAE5; color: #059669; font-size: 0.75rem;">42/42
                                                     Completed</span>
-                                                <button class="btn-primary" style="padding: 8px 20px;">View
+                                                <button class="btn-primary" style="padding: 8px 20px;"
+                                                    onclick="switchView('quizzes')">View
                                                     Results</button>
                                             </div>
                                         </div>
@@ -440,9 +444,11 @@
                                 <p style="font-size: 0.85rem; color: var(--db-text-muted);">Today's Overall Presence</p>
                             </div>
                             <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 10px;">
-                                <button class="btn-primary" style="width: 100%;"><i class="fas fa-edit"
+                                <button class="btn-primary" style="width: 100%;"
+                                    onclick="openModal('attendanceModal')"><i class="fas fa-edit"
                                         style="margin-right: 8px;"></i> Mark Attendance</button>
-                                <button class="btn-lms-outline" style="width: 100%;">View Reports</button>
+                                <button class="btn-lms-outline" style="width: 100%;"
+                                    onclick="switchView('performance')">View Reports</button>
                             </div>
                         </div>
 
@@ -451,7 +457,8 @@
                             <div class="dash-section-header">
                                 <h3><i class="fas fa-bullhorn" style="color: var(--db-warning);"></i> Recent Notices
                                 </h3>
-                                <button class="btn-lms-outline" style="font-size: 0.75rem; padding: 4px 8px;">+ Post
+                                <button class="btn-lms-outline" style="font-size: 0.75rem; padding: 4px 8px;"
+                                    onclick="openModal('noticeModal')">+ Post
                                     New</button>
                             </div>
                             <div class="notice-list-brief">
@@ -537,13 +544,14 @@
                             </div>
                         </div>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                            <button class="btn-lms-outline" onclick="switchView('attendance')"><i
+                            <button class="btn-lms-outline" onclick="openModal('attendanceModal')"><i
                                     class="fas fa-calendar-check"></i> Attendance</button>
-                            <button class="btn-lms-outline" onclick="switchView('assignments')"><i
+                            <button class="btn-lms-outline" onclick="openModal('assignmentModal')"><i
                                     class="fas fa-tasks"></i> Assignments</button>
-                            <button class="btn-lms-outline" onclick="switchView('quizzes')"><i
+                            <button class="btn-lms-outline" onclick="openModal('quizModal')"><i
                                     class="fas fa-question-circle"></i> Quizzes</button>
-                            <button class="btn-primary" style="padding: 8px 12px; font-size: 0.85rem;">View
+                            <button class="btn-primary" style="padding: 8px 12px; font-size: 0.85rem;"
+                                onclick="switchView('performance')">View
                                 Details</button>
                         </div>
                     </div>
@@ -575,13 +583,14 @@
                             </div>
                         </div>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                            <button class="btn-lms-outline" onclick="switchView('attendance')"><i
+                            <button class="btn-lms-outline" onclick="openModal('attendanceModal')"><i
                                     class="fas fa-calendar-check"></i> Attendance</button>
-                            <button class="btn-lms-outline" onclick="switchView('assignments')"><i
+                            <button class="btn-lms-outline" onclick="openModal('assignmentModal')"><i
                                     class="fas fa-tasks"></i> Assignments</button>
-                            <button class="btn-lms-outline" onclick="switchView('quizzes')"><i
+                            <button class="btn-lms-outline" onclick="openModal('quizModal')"><i
                                     class="fas fa-question-circle"></i> Quizzes</button>
-                            <button class="btn-primary" style="padding: 8px 12px; font-size: 0.85rem;">View
+                            <button class="btn-primary" style="padding: 8px 12px; font-size: 0.85rem;"
+                                onclick="switchView('performance')">View
                                 Details</button>
                         </div>
                     </div>
@@ -613,7 +622,8 @@
                             <input type="date" value="2026-01-16"
                                 style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px; background: white;">
                         </div>
-                        <button class="btn-primary">Load Student List</button>
+                        <button class="btn-primary" onclick="alert('Student list loaded for the selected date.')">Load
+                            Student List</button>
                     </div>
                 </div>
 
@@ -621,8 +631,10 @@
                     <div class="dash-section-header">
                         <h3><i class="fas fa-users"></i> Student List</h3>
                         <div style="display: flex; gap: 12px;">
-                            <button class="btn-lms-outline">Mark All Present</button>
-                            <button class="btn-primary">Save Attendance</button>
+                            <button class="btn-lms-outline"
+                                onclick="alert('All appearing students marked as Present.')">Mark All Present</button>
+                            <button class="btn-primary" onclick="alert('Attendance record saved for the session!')">Save
+                                Attendance</button>
                         </div>
                     </div>
                     <div class="responsive-table-container">
@@ -715,7 +727,8 @@
                 <div class="dash-card" style="margin-top: 24px;">
                     <div class="dash-section-header">
                         <h3><i class="fas fa-list-ol"></i> Detailed Performance Table</h3>
-                        <button class="btn-lms-outline"><i class="fas fa-download"></i> Export Report</button>
+                        <button class="btn-lms-outline" onclick="alert('Exporting report as PDF...')"><i
+                                class="fas fa-download"></i> Export Report</button>
                     </div>
                     <div class="responsive-table-container">
                         <table class="results-table">
@@ -770,7 +783,8 @@
                 </header>
 
                 <div style="margin-top: 24px; margin-bottom: 24px;">
-                    <button class="btn-primary"><i class="fas fa-plus"></i> Create New Assignment</button>
+                    <button class="btn-primary" onclick="openModal('assignmentModal')"><i class="fas fa-plus"></i>
+                        Create New Assignment</button>
                 </div>
 
                 <div class="course-grid">
@@ -803,8 +817,10 @@
                         </div>
 
                         <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <button class="btn-primary" style="width: 100%;">View Submissions</button>
-                            <button class="btn-lms-outline" style="width: 100%;">Grade All</button>
+                            <button class="btn-primary" style="width: 100%;"
+                                onclick="alert('Opening submission portal...')">View Submissions</button>
+                            <button class="btn-lms-outline" style="width: 100%;"
+                                onclick="alert('Opening grading interface...')">Grade All</button>
                         </div>
                     </div>
 
@@ -837,8 +853,10 @@
                         </div>
 
                         <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <button class="btn-primary" style="width: 100%;">View Results</button>
-                            <button class="btn-lms-outline" style="width: 100%;">Update Grades</button>
+                            <button class="btn-primary" style="width: 100%;"
+                                onclick="alert('Opening result analytics...')">View Results</button>
+                            <button class="btn-lms-outline" style="width: 100%;"
+                                onclick="alert('Opening grade update panel...')">Update Grades</button>
                         </div>
                     </div>
                 </div>
@@ -851,7 +869,8 @@
                 </header>
 
                 <div style="margin-top: 24px; margin-bottom: 24px;">
-                    <button class="btn-primary"><i class="fas fa-plus"></i> Create New Quiz</button>
+                    <button class="btn-primary" onclick="openModal('quizModal')"><i class="fas fa-plus"></i> Create New
+                        Quiz</button>
                 </div>
 
                 <div class="course-grid">
@@ -880,8 +899,10 @@
                         </div>
 
                         <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <button class="btn-primary" style="width: 100%;">View Results</button>
-                            <button class="btn-lms-outline" style="width: 100%;">Edit Quiz</button>
+                            <button class="btn-primary" style="width: 100%;"
+                                onclick="alert('Opening quiz results...')">View Results</button>
+                            <button class="btn-lms-outline" style="width: 100%;" onclick="openModal('quizModal')">Edit
+                                Quiz</button>
                         </div>
                     </div>
 
@@ -911,7 +932,8 @@
 
                         <div style="display: flex; flex-direction: column; gap: 8px;">
                             <button class="btn-primary" style="width: 100%;" disabled>Edit Scheduled</button>
-                            <button class="btn-lms-outline" style="width: 100%;">Preview Quiz</button>
+                            <button class="btn-lms-outline" style="width: 100%;"
+                                onclick="alert('Opening quiz preview...')">Preview Quiz</button>
                         </div>
                     </div>
                 </div>
@@ -924,7 +946,8 @@
                 </header>
 
                 <div style="margin-top: 24px; margin-bottom: 24px;">
-                    <button class="btn-primary"><i class="fas fa-plus"></i> Post New Notice</button>
+                    <button class="btn-primary" onclick="openModal('noticeModal')"><i class="fas fa-plus"></i> Post New
+                        Notice</button>
                     <button class="btn-lms-outline" style="margin-left: 12px;">Drafts (2)</button>
                 </div>
 
@@ -947,11 +970,12 @@
                         <div
                             style="display: flex; gap: 10px; border-top: 1px solid var(--db-border); padding-top: 12px; margin-top: 12px;">
                             <button
-                                style="background: none; border: none; color: var(--db-secondary); cursor: pointer; font-size: 0.85rem; font-weight: 600;"><i
-                                    class="fas fa-edit"></i> Edit</button>
+                                style="background: none; border: none; color: var(--db-secondary); cursor: pointer; font-size: 0.85rem; font-weight: 600;"
+                                onclick="openModal('noticeModal')"><i class="fas fa-edit"></i> Edit</button>
                             <button
-                                style="background: none; border: none; color: var(--db-danger); cursor: pointer; font-size: 0.85rem; font-weight: 600;"><i
-                                    class="fas fa-trash"></i> Delete</button>
+                                style="background: none; border: none; color: var(--db-danger); cursor: pointer; font-size: 0.85rem; font-weight: 600;"
+                                onclick="alert('Notice deleted successfully (Simulated)')"><i class="fas fa-trash"></i>
+                                Delete</button>
                         </div>
                     </div>
 
@@ -974,11 +998,12 @@
                         <div
                             style="display: flex; gap: 10px; border-top: 1px solid var(--db-border); padding-top: 12px; margin-top: 12px;">
                             <button
-                                style="background: none; border: none; color: var(--db-secondary); cursor: pointer; font-size: 0.85rem; font-weight: 600;"><i
-                                    class="fas fa-edit"></i> Edit</button>
+                                style="background: none; border: none; color: var(--db-secondary); cursor: pointer; font-size: 0.85rem; font-weight: 600;"
+                                onclick="openModal('noticeModal')"><i class="fas fa-edit"></i> Edit</button>
                             <button
-                                style="background: none; border: none; color: var(--db-danger); cursor: pointer; font-size: 0.85rem; font-weight: 600;"><i
-                                    class="fas fa-trash"></i> Delete</button>
+                                style="background: none; border: none; color: var(--db-danger); cursor: pointer; font-size: 0.85rem; font-weight: 600;"
+                                onclick="alert('Notice deleted successfully (Simulated)')"><i class="fas fa-trash"></i>
+                                Delete</button>
                         </div>
                     </div>
                 </div>
@@ -1044,7 +1069,8 @@
                                             Industrial Wiring & Safety</p>
                                     </div>
                                 </div>
-                                <button class="btn-lms-outline" style="padding: 6px 12px;">View Profile</button>
+                                <button class="btn-lms-outline" style="padding: 6px 12px;"
+                                    onclick="switchView('profile')">View Profile</button>
                             </div>
                             <!-- Chat Messages -->
                             <div
@@ -1071,7 +1097,8 @@
                                 style="padding: 16px; border-top: 1px solid var(--db-border); display: flex; gap: 12px;">
                                 <input type="text" placeholder="Type your message..."
                                     style="flex: 1; padding: 12px; border: 1px solid var(--db-border); border-radius: 8px;">
-                                <button class="btn-primary" style="width: 48px; border-radius: 8px;"><i
+                                <button class="btn-primary" style="width: 48px; border-radius: 8px;"
+                                    onclick="alert('Message sent successfully!')"><i
                                         class="fas fa-paper-plane"></i></button>
                             </div>
                         </div>
@@ -1114,8 +1141,8 @@
                         <div class="dash-card">
                             <div class="dash-section-header">
                                 <h3><i class="fas fa-info-circle"></i> Personal Information</h3>
-                                <button class="btn-lms-outline" style="font-size: 0.8rem; padding: 6px 12px;"><i
-                                        class="fas fa-edit"></i> Edit Bio</button>
+                                <button class="btn-lms-outline" style="font-size: 0.8rem; padding: 6px 12px;"
+                                    onclick="openModal('profileModal')"><i class="fas fa-edit"></i> Edit Bio</button>
                             </div>
                             <div
                                 style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 20px;">
@@ -1230,11 +1257,257 @@
                                 </div>
                             </div>
                         </div>
+                        <div style="margin-top: 32px; display: flex; justify-content: flex-end;">
+                            <button class="btn-primary" style="padding: 12px 32px;"
+                                onclick="alert('Settings saved successfully!')">Save All Changes</button>
+                        </div>
                     </div>
                 </div>
             </section>
 
         </main>
+    </div>
+
+    <!-- Modals System -->
+    <!-- Attendance Modal -->
+    <div class="modal-overlay" id="attendanceModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3><i class="fas fa-calendar-check"></i> Mark Attendance</h3>
+                <button class="modal-close" onclick="closeModal('attendanceModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="attendanceForm">
+                    <div style="margin-bottom: 16px;">
+                        <label
+                            style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Course</label>
+                        <select class="form-control"
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px;">
+                            <option>Industrial Wiring & Safety - 2024-B</option>
+                            <option>Three Phase Motor Control - 2024-B</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                        <label
+                            style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Date</label>
+                        <input type="date" class="form-control" value="2026-01-28"
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px;">
+                    </div>
+                    <div class="responsive-table-container">
+                        <table class="results-table" style="font-size: 0.85rem;">
+                            <thead>
+                                <tr>
+                                    <th>Student</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Yasir Ismail</td>
+                                    <td>
+                                        <select
+                                            style="padding: 4px; border-radius: 4px; border: 1px solid var(--db-border);">
+                                            <option>Present</option>
+                                            <option>Absent</option>
+                                            <option>Leave</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>M. Bilal</td>
+                                    <td>
+                                        <select
+                                            style="padding: 4px; border-radius: 4px; border: 1px solid var(--db-border);">
+                                            <option>Present</option>
+                                            <option>Absent</option>
+                                            <option>Leave</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-lms-outline" onclick="closeModal('attendanceModal')">Cancel</button>
+                <button class="btn-primary" onclick="handleFormSubmit('attendanceModal')">Save Attendance</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assignment Modal -->
+    <div class="modal-overlay" id="assignmentModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3><i class="fas fa-plus-circle"></i> Create New Assignment</h3>
+                <button class="modal-close" onclick="closeModal('assignmentModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="assignmentForm">
+                    <div style="margin-bottom: 16px;">
+                        <label
+                            style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Assignment
+                            Title</label>
+                        <input type="text" placeholder="e.g. Practical: Motor Control"
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px;">
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Select
+                            Course</label>
+                        <select
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px;">
+                            <option>Industrial Wiring & Safety</option>
+                            <option>Three Phase Motor Control</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Due
+                            Date</label>
+                        <input type="date"
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px;">
+                    </div>
+                    <div>
+                        <label
+                            style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Instructions</label>
+                        <textarea rows="4"
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px; resize: vertical;"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-lms-outline" onclick="closeModal('assignmentModal')">Draft</button>
+                <button class="btn-primary" onclick="handleFormSubmit('assignmentModal')">Publish Assignment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notice Modal -->
+    <div class="modal-overlay" id="noticeModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3><i class="fas fa-bullhorn"></i> Post New Notice</h3>
+                <button class="modal-close" onclick="closeModal('noticeModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="noticeForm">
+                    <div style="margin-bottom: 16px;">
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Notice
+                            Title</label>
+                        <input type="text" placeholder="Subject of the notice"
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px;">
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                        <label
+                            style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Category</label>
+                        <select
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px;">
+                            <option>Important Announcement</option>
+                            <option>Exam/Practical Schedule</option>
+                            <option>New Material Uploaded</option>
+                            <option>General Information</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Notice
+                            Content</label>
+                        <textarea rows="4"
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px; resize: vertical;"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-lms-outline" onclick="closeModal('noticeModal')">Cancel</button>
+                <button class="btn-primary" onclick="handleFormSubmit('noticeModal')">Post Notice</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div class="modal-overlay" id="quizModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3><i class="fas fa-plus-circle"></i> Create New Quiz</h3>
+                <button class="modal-close" onclick="closeModal('quizModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="quizForm">
+                    <div style="margin-bottom: 16px;">
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Quiz
+                            Title</label>
+                        <input type="text" placeholder="e.g. Mid-term Safety Quiz"
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px;">
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Select
+                            Course</label>
+                        <select
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px;">
+                            <option>Industrial Wiring & Safety</option>
+                            <option>Three Phase Motor Control</option>
+                        </select>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                        <div>
+                            <label
+                                style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Time
+                                Limit (mins)</label>
+                            <input type="number" value="30"
+                                style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px;">
+                        </div>
+                        <div>
+                            <label
+                                style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Total
+                                Questions</label>
+                            <input type="number" value="10"
+                                style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px;">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-lms-outline" onclick="closeModal('quizModal')">Cancel</button>
+                <button class="btn-primary" onclick="handleFormSubmit('quizModal')">Create Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div class="modal-overlay" id="profileModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-edit"></i> Edit Profile Bio</h3>
+                <button class="modal-close" onclick="closeModal('profileModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="profileForm">
+                    <div style="margin-bottom: 16px;">
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Full
+                            Name</label>
+                        <input type="text" value="Engr. M. Ahmed"
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px;">
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                        <label
+                            style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Professional
+                            Bio</label>
+                        <textarea rows="4"
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px; resize: vertical;">Senior Instructor with 12+ years of experience in Electronic Engineering and Industrial Automation.</textarea>
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                        <label
+                            style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Expertise
+                            (comma separated)</label>
+                        <input type="text" value="Industrial Wiring, PLC, Safety Standards"
+                            style="width: 100%; padding: 10px; border: 1px solid var(--db-border); border-radius: 6px;">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-lms-outline" onclick="closeModal('profileModal')">Cancel</button>
+                <button class="btn-primary" onclick="handleFormSubmit('profileModal')">Update Profile</button>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -1305,6 +1578,51 @@
                 }
             });
         });
+
+        // Modal Functionality
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'flex';
+                setTimeout(() => {
+                    modal.classList.add('active');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal on overlay click
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal-overlay')) {
+                closeModal(event.target.id);
+            }
+        }
+
+        function handleFormSubmit(modalId) {
+            // Simulated submission
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                alert('Success! Your action has been completed.');
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                closeModal(modalId);
+            }, 1000);
+        }
     </script>
 </body>
 
